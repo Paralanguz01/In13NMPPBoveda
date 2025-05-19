@@ -1,0 +1,127 @@
+/* ===== RESET & GLOBAL ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121820;
+  color: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+/* ===== MAIN CONTAINER ===== */
+#app {
+  width: 100%;
+  max-width: 440px;
+  background: #1f2a38;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ===== HEADINGS ===== */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+/* ===== FORM ELEMENTS ===== */
+input, textarea, select, button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background-color: #2d3b4f;
+  color: #fff;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button {
+  background-color: #00aaff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out;
+}
+
+button:hover {
+  background-color: #0077cc;
+}
+
+/* ===== PASSWORD TOGGLE ===== */
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+/* ===== SCREEN HANDLING ===== */
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== COUNTDOWN TEXT ===== */
+#countdown {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+  color: #00ffaa;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: #00aaff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 500px) {
+  #app {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}

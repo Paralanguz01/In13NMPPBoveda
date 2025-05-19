@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Boveda NMPP</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bóveda Digital</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- 🟦 LOGIN -->
+    <section id="login-screen" class="screen active">
+      <h1>Bóveda Digital</h1>
+      <form id="login-form">
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <div class="password-wrapper">
+          <input type="password" name="password" placeholder="Clave maestra" required>
+          <span class="toggle-password">👁️</span>
+        </div>
+        <button type="submit">Ingresar</button>
+      </form>
+      <p><a href="#" id="go-register">Crear cuenta</a> | <a href="#" id="go-reset">¿Olvidaste tu contraseña?</a></p>
+    </section>
+
+    <!-- 🟩 REGISTRO -->
+    <section id="register-screen" class="screen">
+      <h1>Crear Cuenta</h1>
+      <form id="register-form">
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="password" name="password" placeholder="Clave (mínimo 6 caracteres, Aa1)" required>
+        <button type="submit">Registrar</button>
+      </form>
+      <p><a href="#" id="go-login">Volver</a></p>
+    </section>
+
+    <!-- 🟨 CONFIGURACIÓN -->
+    <section id="config-screen" class="screen">
+      <h2>Configurar Caja Fuerte</h2>
+      <form id="config-form">
+        <textarea name="reminder" placeholder="Mensaje de reflexión personalizado" required></textarea>
+        <input type="text" name="q1" placeholder="Pregunta 1" required>
+        <input type="text" name="a1" placeholder="Respuesta 1" required>
+        <input type="text" name="q2" placeholder="Pregunta 2" required>
+        <input type="text" name="a2" placeholder="Respuesta 2" required>
+        <label>Tiempo de espera:</label>
+        <input type="number" name="delay" min="1" required>
+        <select name="unit">
+          <option value="minutes">Minutos</option>
+          <option value="hours">Horas</option>
+          <option value="days">Días</option>
+        </select>
+        <button type="submit">Guardar Configuración</button>
+      </form>
+    </section>
+
+    <!-- 🟫 PREGUNTAS -->
+    <section id="questions-screen" class="screen">
+      <h2>Verificación Personal</h2>
+      <p id="reminder-msg"></p>
+      <form id="questions-form"></form>
+      <button id="submit-answers">Verificar Respuestas</button>
+    </section>
+
+    <!-- 🟥 ESPERA -->
+    <section id="countdown-screen" class="screen">
+      <h2>Tiempo de Espera</h2>
+      <p>Tu caja fuerte estará disponible en:</p>
+      <p id="countdown"></p>
+    </section>
+
+    <!-- ✅ BÓVEDA ABIERTA -->
+    <section id="vault-screen" class="screen">
+      <h2>Contenido Seguro</h2>
+      <textarea id="vault-data" placeholder="Aquí puedes guardar tu información..."></textarea>
+      <button id="save-vault">Guardar</button>
+      <button id="close-vault">Cerrar Caja Fuerte</button>
+    </section>
+
+  </div>
+
+  <!-- Script principal único -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
